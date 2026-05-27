@@ -208,6 +208,7 @@
 
             <div class="nav-buttons-container">
                 <button class="btn-modern" onclick="toggleContent('about', this)">What is Jiu Jitsu?</button>
+                <button class="btn-modern" onclick="toggleContent('kids', this)">Kid's Classes</button>
                 <button class="btn-modern" onclick="toggleContent('instructor', this)">Who is Danillo Bighi?</button>
                 <button class="btn-modern" onclick="toggleContent('timetable', this)">Where & When</button>
                 <button class="btn-modern" onclick="toggleContent('pricing', this)">Pricing</button>
@@ -220,18 +221,23 @@
                     <button class="btn-close-panel" onclick="closeAllPanels()">&times;</button>
                     <h2>What is Jiu Jitsu?</h2>
                     <p class="lead mb-3">Brazilian Jiu Jitsu is a complete martial art — from the moment two people face each other standing, to the ground where the real game begins. It covers takedowns, transitions, and submissions, all built on technique and awareness rather than size or strength.</p>
-                    <p class="mb-3">Two students train together, taking turns attacking and defending. They learn to read each other, stay calm under pressure, and find solutions in real time.</p>
-                    <p>That is what makes it different from most sports: there is no hiding on the mat. Every class asks something real from your child — focus, patience, problem-solving. And every class gives something back.</p>
+                    <p>Students learn to stay calm under pressure and find solutions in real time. For children, that means developing focus, patience, and problem-solving — built through hard work and consistency, class after class.</p>
+                </div>
+
+                <div id="kids" class="content-panel">
+                    <button class="btn-close-panel" onclick="closeAllPanels()">&times;</button>
+                    <h2>Your child will learn more than Jiu Jitsu.</h2>
+                    <p class="lead mb-3">At Zaandam Jiu Jitsu Club, we believe the mat is a place where children discover who they are. Through jiu jitsu, they learn to move, to think, and to solve problems under pressure.</p>
+                    <p class="mb-3">Without realising it, they are also learning to persist, to trust themselves, and to handle hard things with calm.</p>
+                    <p>What they build here, they carry everywhere, into school, into friendships, into life. Not because we tell them to. Because they lived it every class, every week.</p>
                 </div>
 
                 <div id="instructor" class="content-panel">
                     <button class="btn-close-panel" onclick="closeAllPanels()">&times;</button>
                     <h2>Who is Danillo Bighi?</h2>
-                    <p class="mb-3">Danillo was born and raised in Rio de Janeiro — the birthplace of Brazilian Jiu Jitsu. He has been training since 2004 and received his black belt from Roger Gracie, widely considered the greatest jiu jitsu competitor of all time.</p>
-                    <p class="mb-3">A coach and team leader with over two decades on the mat, Danillo has worked with students of all ages and levels — from beginners finding their feet to competitors stepping onto the biggest stages.</p>
-                    <p class="mb-3">But there is one place where his impact runs deepest.</p>
-                    <p class="mb-4">The son of two teachers, Danillo grew up understanding the value of good instruction. When he began working with children and saw how profoundly jiu jitsu could shape them — not just as athletes, but as people — he knew where his greatest contribution lay. He has led strong children's programmes in both Rio de Janeiro and Amsterdam, and that same commitment now drives everything at Zaandam Jiu Jitsu Club.</p>
-                    <p class="fw-bold text-white">Serious instruction. Genuine care. A place where every student — young or old — feels they belong.</p>
+                    <p class="mb-3">Danillo was born and raised in Rio de Janeiro, the birthplace of Brazilian Jiu Jitsu. He has been training since 2004 and received his black belt from Roger Gracie, the greatest jiu jitsu competitor of all time.</p>
+                    <p class="mb-3">A coach and team leader with over two decades on the mat, Danillo has worked with students of all ages and levels.</p>
+                    <p>The son of two teachers, Danillo grew up understanding the value of good instruction. When he began working with children and saw how profoundly jiu jitsu could shape them, not just as athletes, but as people, he never looked back. He has led strong children's programmes in both Rio de Janeiro and Amsterdam, and his focus is now fully in Zaandam.</p>
                 </div>
 
                 <div id="timetable" class="content-panel">
@@ -275,20 +281,9 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-4 mb-2">
+                            <div class="col-md-12 mb-2">
                                 <label class="form-label">Age</label>
                                 <input type="number" th:field="*{age}" class="form-control" required>
-                            </div>
-                            <div class="col-md-4 mb-2">
-                                <label class="form-label">Preferred Date</label>
-                                <input type="date" th:field="*{preferredDate}" class="form-control" required>
-                            </div>
-                            <div class="col-md-4 mb-2">
-                                <label class="form-label">Time Slot</label>
-                                <select th:field="*{preferredTimeSlot}" class="form-select" required>
-                                    <option value="Afternoon (15:30)">Afternoon (15:30)</option>
-                                    <option value="Afternoon (16:15)">Afternoon (16:15)</option>
-                                </select>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-submit mt-2">Submit Request</button>
