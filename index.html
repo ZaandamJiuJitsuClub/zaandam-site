@@ -197,6 +197,16 @@
         li {
             margin-bottom: 8px;
         }
+
+        .contact-link {
+            color: #f8f9fa;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-link:hover {
+            color: #00ff66;
+        }
     </style>
 </head>
 <body>
@@ -212,7 +222,7 @@
                 <button class="btn-modern" onclick="toggleContent('instructor', this)">Who is Danillo Bighi?</button>
                 <button class="btn-modern" onclick="toggleContent('timetable', this)">Where & When</button>
                 <button class="btn-modern" onclick="toggleContent('pricing', this)">Pricing</button>
-                <button class="btn-modern" onclick="toggleContent('book', this)">Book a class</button>
+                <button class="btn-modern" onclick="toggleContent('book', this)">Book/Contact</button>
             </div>
 
             <div class="panel-container">
@@ -263,31 +273,23 @@
 
                 <div id="book" class="content-panel">
                     <button class="btn-close-panel" onclick="closeAllPanels()">&times;</button>
-                    <h2>Book a Class</h2>
-                    <p class="text-muted mb-3 small">Fill in the form below to reserve your spot.</p>
-                    <form th:action="@{/booking}" th:object="${booking}" method="post">
-                        <div class="mb-2">
-                            <label class="form-label">Full Name</label>
-                            <input type="text" th:field="*{fullName}" class="form-control" required>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 mb-2">
-                                <label class="form-label">Email</label>
-                                <input type="email" th:field="*{email}" class="form-control" required>
-                            </div>
-                            <div class="col-md-6 mb-2">
-                                <label class="form-label">Phone Number</label>
-                                <input type="tel" th:field="*{phone}" class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 mb-2">
-                                <label class="form-label">Age</label>
-                                <input type="number" th:field="*{age}" class="form-control" required>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-submit mt-2">Submit Request</button>
-                    </form>
+                    <h2>Book / Contact</h2>
+                    <p class="lead mb-4">Get in touch with us to book your free trial class or ask any questions.</p>
+                    
+                    <ul class="list-unstyled fs-5">
+                        <li class="mb-3">
+                            <span style="color: #00ff66; font-weight: bold; font-family: 'Urbanist', sans-serif; text-transform: uppercase; letter-spacing: 1px;">Instagram:</span><br>
+                            <a href="https://instagram.com/zaandamjiujitsuclub" target="_blank" class="contact-link">@zaandamjiujitsuclub</a>
+                        </li>
+                        <li class="mb-3">
+                            <span style="color: #00ff66; font-weight: bold; font-family: 'Urbanist', sans-serif; text-transform: uppercase; letter-spacing: 1px;">Whatsapp:</span><br>
+                            <a href="https://wa.me/31682078179" target="_blank" class="contact-link">+31 6 82078179</a>
+                        </li>
+                        <li class="mb-3">
+                            <span style="color: #00ff66; font-weight: bold; font-family: 'Urbanist', sans-serif; text-transform: uppercase; letter-spacing: 1px;">Email:</span><br>
+                            <a href="mailto:zaandamjiujitsuclub@gmail.com" class="contact-link">zaandamjiujitsuclub@gmail.com</a>
+                        </li>
+                    </ul>
                 </div>
 
             </div>
