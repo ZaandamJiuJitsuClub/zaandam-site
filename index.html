@@ -1,10 +1,11 @@
+```html
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zaandam Jiu Jitsu Club</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -216,6 +217,15 @@
             margin-bottom: 10px;
         }
 
+        h4 {
+            font-family: 'Urbanist', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: #f8f9fa;
+            margin-top: 12px;
+            margin-bottom: 6px;
+        }
+
         .form-control, .form-select {
             background-color: #141414;
             border: 1px solid #333333;
@@ -285,25 +295,45 @@
 
     <header class="hero-section text-center">
         <div class="container d-flex flex-column align-items-center px-0">
-            
+
             <h1><span>ZAANDAM</span> JIU JITSU CLUB</h1>
 
             <div class="nav-buttons-container">
-                <button class="btn-modern" onclick="toggleContent('about', this)">What is Jiu Jitsu?</button>
-                <button class="btn-modern" onclick="toggleContent('kids', this)">Kid's Classes</button>
+                <button class="btn-modern" onclick="toggleContent('about', this)">What is Jiu Jitsu</button>
+                <button class="btn-modern" onclick="toggleContent('adults', this)">Adult classes</button>
+                <button class="btn-modern" onclick="toggleContent('kids', this)">Kids classes</button>
                 <button class="btn-modern" onclick="toggleContent('instructor', this)">Who is Danillo Bighi?</button>
-                <button class="btn-modern" onclick="toggleContent('timetable', this)">Where & When</button>
+                <button class="btn-modern" onclick="toggleContent('schedule', this)">Schedule</button>
                 <button class="btn-modern" onclick="toggleContent('pricing', this)">Pricing</button>
-                <button class="btn-modern" onclick="toggleContent('book', this)">Book/Contact</button>
+                <button class="btn-modern" onclick="toggleContent('book', this)">Book / Contact</button>
             </div>
 
             <div class="panel-container">
-                
+
                 <div id="about" class="content-panel">
                     <button class="btn-close-panel" onclick="closeAllPanels()">&times;</button>
                     <h2>What is Jiu Jitsu?</h2>
-                    <p class="lead mb-3">Brazilian Jiu Jitsu is a complete martial art — from the moment two people face each other standing, to the ground where the real game begins. It covers takedowns, transitions, and submissions, all built on technique and awareness rather than size or strength.</p>
-                    <p>Students learn to stay calm under pressure and find solutions in real time. For children, that means developing focus, patience, and problem-solving — built through hard work and consistency, class after class.</p>
+                    <p class="lead mb-3">Brazilian Jiu Jitsu is a grappling martial art built on control. Standing or on the ground, the goal is to take a dominant position and finish with a submission. Leverage and technique do the work, not size or strength, which is why a smaller person can handle a bigger one.</p>
+                    <p class="mb-3">On the mat, you learn to stay calm under pressure and find solutions in real time. Kids build focus, patience, and confidence. Adults build fitness, resilience, and a clearer mind. Everyone builds it the same way: class after class.</p>
+                    <p class="fw-bold mb-0">All levels welcome. Kids and adults.</p>
+                </div>
+
+                <div id="adults" class="content-panel">
+                    <button class="btn-close-panel" onclick="closeAllPanels()">&times;</button>
+                    <h2>Adult classes</h2>
+                    <p class="lead mb-3">Our adult classes follow a structured program, so every session builds on the last. You'll learn the fundamentals of jiu jitsu, from positions and escapes to submissions and self defense.</p>
+                    <p class="mb-3">Through detail, repetition, and sparring, you'll develop the timing and control that make it work. Beginners start with the basics, and experienced students keep sharpening theirs.</p>
+
+                    <h3>Schedule</h3>
+                    <h4>Monday, Wednesday &amp; Friday mornings</h4>
+                    <ul>
+                        <li>07:00 – 08:00</li>
+                        <li>09:00 – 10:15</li>
+                    </ul>
+                    <h4>Monday &amp; Wednesday evenings</h4>
+                    <ul>
+                        <li>18:00 – 19:15</li>
+                    </ul>
                 </div>
 
                 <div id="kids" class="content-panel">
@@ -311,51 +341,78 @@
                     <h2>Your child will learn more than Jiu Jitsu.</h2>
                     <p class="lead mb-3">At Zaandam Jiu Jitsu Club, we believe the mat is a place where children discover who they are. Through jiu jitsu, they learn to move, to think, and to solve problems under pressure.</p>
                     <p class="mb-3">Without realising it, they are also learning to persist, to trust themselves, and to handle hard things with calm.</p>
-                    <p>What they build here, they carry everywhere, into school, into friendships, into life. Not because we tell them to. Because they lived it every class, every week.</p>
+                    <p class="mb-3">What they build here, they carry everywhere, into school, into friendships, into life. Not because we tell them to. Because they lived it every class, every week.</p>
+
+                    <h3>Schedule</h3>
+                    <h4>Monday &amp; Wednesday</h4>
+                    <ul>
+                        <li>Ages 4–7 · 15:30 – 16:15</li>
+                        <li>Ages 8 &amp; up · 16:15 – 17:00</li>
+                    </ul>
                 </div>
 
                 <div id="instructor" class="content-panel">
                     <button class="btn-close-panel" onclick="closeAllPanels()">&times;</button>
                     <h2>Who is Danillo Bighi?</h2>
                     <p class="mb-3">Danillo was born and raised in Rio de Janeiro, the birthplace of Brazilian Jiu Jitsu. He has been training since 2004 and received his black belt from Roger Gracie, the greatest jiu jitsu competitor of all time.</p>
-                    <p class="mb-3">A coach and team leader with over two decades on the mat, Danillo has worked with students of all ages and levels.</p>
-                    <p>The son of two teachers, Danillo grew up understanding the value of good instruction. When he began working with children and saw how profoundly jiu jitsu could shape them, not just as athletes, but as people, he never looked back. He has led strong children's programmes in both Rio de Janeiro and Amsterdam, and his focus is now fully in Zaandam.</p>
+                    <p class="mb-3">A coach and team leader with over two decades on the mat, Danillo has taught students of all ages and levels.</p>
+                    <p class="mb-0">The son of two teachers, Danillo grew up understanding the value of good instruction. He has led strong adult and children's programmes in both Rio de Janeiro and Amsterdam, and his focus is now fully in Zaandam.</p>
                 </div>
 
-                <div id="timetable" class="content-panel">
+                <div id="schedule" class="content-panel">
                     <button class="btn-close-panel" onclick="closeAllPanels()">&times;</button>
-                    <h2>Where & When</h2>
-                    <p class="fw-bold mb-3">De Vechtfabriek Stormhoek 37, 1506 SW Zaandam</p>
-                    
-                    <h3>Monday & Wednesday — afternoon classes</h3>
+                    <h2>Schedule</h2>
+                    <p class="fw-bold mb-1">De Vechtfabriek Stormhoek 37, 1506 SW Zaandam</p>
+                    <p class="text-muted small mb-3">Free parking available on site.</p>
+
+                    <h3>Adult classes</h3>
+                    <h4>Monday, Wednesday &amp; Friday mornings</h4>
                     <ul>
-                        <li>Ages 4–7 · 15:30–16:15</li>
-                        <li>Ages 8 & up · 16:15–17:00</li>
+                        <li>07:00 – 08:00</li>
+                        <li>09:00 – 10:15</li>
                     </ul>
-                    <p class="text-muted small mt-3">Free parking available on site.</p>
+                    <h4>Monday &amp; Wednesday evenings</h4>
+                    <ul>
+                        <li>18:00 – 19:15</li>
+                    </ul>
+
+                    <h3>Kids classes</h3>
+                    <h4>Monday &amp; Wednesday</h4>
+                    <ul>
+                        <li>Ages 4–7 · 15:30 – 16:15</li>
+                        <li>Ages 8 &amp; up · 16:15 – 17:00</li>
+                    </ul>
+
+                    <p class="fw-bold mt-4 mb-0" style="color: #00ff66;">Your tryout class is free.</p>
                 </div>
 
                 <div id="pricing" class="content-panel">
                     <button class="btn-close-panel" onclick="closeAllPanels()">&times;</button>
                     <h2>Pricing</h2>
-                    <p class="lead mb-4"><strong>First class is free.</strong> Come and try before you commit.</p>
-                    <p class="mb-3"><strong>Registration</strong> — €100
-                    <p class="mb-0"><strong>Monthly fee 1x/week</strong> — €45 / month</p>
-                    <p class="mb-0"><strong>Monthly fee 2x/week</strong> — €60 / month</p>
+                    <p class="lead mb-4"><strong>Your tryout class is free.</strong></p>
+
+                    <h3>Adults</h3>
+                    <p class="mb-1"><strong>Registration:</strong> €150</p>
+                    <p class="mb-3"><strong>Monthly fee:</strong> €85 / month, unlimited classes</p>
+
+                    <h3>Kids</h3>
+                    <p class="mb-1"><strong>Registration:</strong> €100</p>
+                    <p class="mb-1"><strong>Monthly fee, 1x/week:</strong> €45 / month</p>
+                    <p class="mb-0"><strong>Monthly fee, 2x/week:</strong> €60 / month</p>
                 </div>
 
                 <div id="book" class="content-panel">
                     <button class="btn-close-panel" onclick="closeAllPanels()">&times;</button>
                     <h2>Book / Contact</h2>
-                    <p class="lead mb-4">Get in touch with us to book your free trial class or ask any questions.</p>
-                    
+                    <p class="lead mb-4">Get in touch to book your free tryout class or to ask any questions.</p>
+
                     <ul class="list-unstyled fs-5">
                         <li class="mb-3">
                             <span style="color: #00ff66; font-weight: bold; font-family: 'Urbanist', sans-serif; text-transform: uppercase; letter-spacing: 1px;">Instagram:</span><br>
                             <a href="https://instagram.com/zaandamjiujitsuclub" target="_blank" class="contact-link">@zaandamjiujitsuclub</a>
                         </li>
                         <li class="mb-3">
-                            <span style="color: #00ff66; font-weight: bold; font-family: 'Urbanist', sans-serif; text-transform: uppercase; letter-spacing: 1px;">Whatsapp:</span><br>
+                            <span style="color: #00ff66; font-weight: bold; font-family: 'Urbanist', sans-serif; text-transform: uppercase; letter-spacing: 1px;">WhatsApp:</span><br>
                             <a href="https://wa.me/31682078179" target="_blank" class="contact-link">+31 6 82078179</a>
                         </li>
                         <li class="mb-3">
@@ -399,6 +456,6 @@
             });
         }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
